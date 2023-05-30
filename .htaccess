@@ -1,0 +1,8 @@
+<FilesMatch \.(jpg|jpeg|png|gif|svg)$>
+    Order deny,allow
+    Deny from all
+    Allow from env=localreferer
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
